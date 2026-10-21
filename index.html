@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Escolar - 10 Años | Colegio Luterano El Redentor</title>
+    <meta name="description" content="Recetario oficial del Colegio Luterano El Redentor de San Salvador, Entre Ríos. Celebrando 10 años de una escuela diferente.">
+
+    <style>
+        :root {
+            --color-red: #C8232C;
+            --color-blue: #0D4C82;
+            --color-bg: #f8f9fa;
+            --color-card-bg: #ffffff;
+            --color-text: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Encabezado */
+        header {
+            background: #ffffff;
+            border-bottom: 4px solid var(--color-red);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 100px; /* Logo a 100px */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .anniversary-badge {
+            background-color: var(--color-blue);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            border-bottom: 3px solid var(--color-red);
+        }
+
+        .anniversary-badge .title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .anniversary-badge .subtitle {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Contenido Principal */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title h1 {
+            color: var(--color-blue);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .hero-title p {
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* Botones de los Grados */
+        .grades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .grade-card {
+            background: var(--color-card-bg);
+            border: 2px solid var(--color-blue);
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grade-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-red);
+            box-shadow: 0 8px 15px rgba(200, 35, 44, 0.15);
+            background-color: #fdfdfd;
+        }
+
+        .grade-card h2 {
+            color: var(--color-blue);
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .grade-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer Pegado al Fondo */
+        footer {
+            margin-top: auto;
+            background-color: var(--color-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--color-red);
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .grades-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="logo.jpg" alt="Logo Colegio Luterano El Redentor">
+        </div>
+        <div class="anniversary-badge">
+            <span class="title">10 AÑOS</span>
+            <span class="subtitle">de una escuela diferente</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-title">
+            <h1>Recetario Escolar</h1>
+            <p>Elegí un grado para explorar las recetas preparadas por los alumnos</p>
+        </div>
+
+        <div class="grades-grid">
+            <a href="recetario-1er-grado.html" class="grade-card">
+                <h2>Recetario 1.er Grado</h2>
+                <p>Ver todas las recetas de 1.er Grado</p>
+            </a>
+
+            <a href="recetario-2do-grado.html" class="grade-card">
+                <h2>Recetario 2.º Grado</h2>
+                <p>Ver todas las recetas de 2.º Grado</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Colegio Luterano El Redentor - San Salvador, Entre Ríos.</p>
+    </footer>
+
+</body>
+</html>
