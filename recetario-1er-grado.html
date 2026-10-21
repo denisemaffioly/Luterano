@@ -44,7 +44,7 @@
         }
 
         .logo-img {
-            height: 100px; /* Logo a 100px */
+            height: 100px;
             width: auto;
             object-fit: contain;
         }
@@ -79,7 +79,7 @@
             padding: 30px 20px;
         }
 
-        /* Botón Volver a la página principal */
+        /* Botón Volver */
         .btn-back {
             display: inline-flex;
             align-items: center;
@@ -109,7 +109,7 @@
             padding-bottom: 8px;
         }
 
-        /* Listado de Tarjetas de Receta (Diseño de tu Boceto) */
+        /* Lista de Tarjetas (Boceto) */
         .recipe-list {
             display: flex;
             flex-direction: column;
@@ -137,7 +137,6 @@
             box-shadow: 0 6px 15px rgba(200, 35, 44, 0.12);
         }
 
-        /* Recuadro para la FOTO a la izquierda */
         .recipe-img-box {
             width: 90px;
             height: 90px;
@@ -148,7 +147,6 @@
             background-color: #f1f5f9;
         }
 
-        /* Texto NOMBRE RECETA a la derecha */
         .recipe-info h2 {
             color: var(--color-blue);
             font-size: 1.3rem;
@@ -160,7 +158,7 @@
             font-size: 0.9rem;
         }
 
-        /* Modal Flotante para ver la receta escrita al tocarla */
+        /* Modal Flotante para MSTRAR LA FOTO DE LA RECETA COMPLETA */
         .recipe-modal {
             display: none;
             position: fixed;
@@ -168,7 +166,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.75);
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -181,21 +179,22 @@
 
         .modal-body {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            max-width: 650px;
+            max-width: 700px;
             width: 100%;
-            max-height: 85vh;
+            max-height: 90vh;
             overflow-y: auto;
             position: relative;
             border-top: 6px solid var(--color-red);
+            text-align: center;
         }
 
         .close-btn {
             position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2rem;
+            top: 10px;
+            right: 18px;
+            font-size: 2.2rem;
             text-decoration: none;
             color: #64748b;
             font-weight: bold;
@@ -203,32 +202,18 @@
 
         .modal-body h2 {
             color: var(--color-blue);
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
 
-        .author-text {
-            color: #64748b;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .subtitle {
-            color: var(--color-red);
-            font-size: 1.2rem;
-            margin: 20px 0 10px 0;
-            font-weight: 700;
-        }
-
-        .modal-body ul, .modal-body ol {
-            margin-left: 20px;
-            line-height: 1.7;
-            color: #334155;
-        }
-
-        .modal-body li {
-            margin-bottom: 6px;
+        /* La foto con la receta escrita */
+        .full-recipe-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
 
         /* Footer Pegado al Fondo */
@@ -280,90 +265,254 @@
     </header>
 
     <main>
-        <!-- Flecha para volver a la página principal -->
         <a href="index.html" class="btn-back">← Volver a la Página Principal</a>
 
-        <h1 class="page-title">Recetario 1.er Grado</h1>
+        <h1 class="page-title">Recetario 1º Grado</h1>
 
-        <!-- LISTA DE RECETAS (FOTO Y NOMBRE) SEGÚN TU DIBUJO -->
+        <!-- LISTA DE RECETAS -->
         <div class="recipe-list">
 
-            <!-- TARJETA RECETA 1 -->
+                        <!-- TARJETA RECETA 1 -->
             <a href="#receta1" class="recipe-card-btn">
-                <!-- Podés poner la ruta de la foto ej: src="tarta.jpg" -->
-                <img class="recipe-img-box" src="https://via.placeholder.com/150" alt="Foto Tarta de Manzana">
+                <img class="recipe-img-box" src="1 grado/Arroz arcoirias.jpeg" alt="Foto Arroz arcoíris">
                 <div class="recipe-info">
-                    <h2>Tarta de Manzana</h2>
-                    <p>Alumno: Juan Pérez</p>
+                    <h2>Arroz arcoíris</h2>
                 </div>
             </a>
 
             <!-- TARJETA RECETA 2 -->
             <a href="#receta2" class="recipe-card-btn">
-                <img class="recipe-img-box" src="https://via.placeholder.com/150" alt="Foto Galletas de Avena">
+                <img class="recipe-img-box" src="1 grado/Arroz con lecha 2.jpeg" alt="Foto Arroz arcoíris">
                 <div class="recipe-info">
-                    <h2>Galletas de Avena</h2>
-                    <p>Alumno: María González</p>
+                    <h2>Arroz con leche</h2>
                 </div>
             </a>
 
+            <!-- TARJETA RECETA 3 -->
+            <a href="#receta3" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Arroz con leche 3.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Arroz con leche 2</h2>
+                </div>
+            </a>
+
+            <!-- TARJETA RECETA 4 -->
+            <a href="#receta4" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Arroz con leche 4.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Arroz con leche 3</h2>
+                </div>
+            </a>
+
+            <!-- TARJETA RECETA 5 -->
+            <a href="#receta5" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Croquetad de arroz y queso.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Croquetas de arroz y queso</h2>
+                </div>
+            </a>
+
+            <!-- TARJETA RECETA 6 -->
+            <a href="#receta6" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Crroquetas de arroz.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Croquetas de arroz</h2>
+                </div>
+            </a>
+ 
+             <!-- TARJETA RECETA 7 -->
+            <a href="#receta7" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Guis de arroz.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Guiso de arroz</h2>
+                </div>
+            </a>
+ 
+             <!-- TARJETA RECETA 8 -->
+            <a href="#receta8" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Guiso de arroz 2.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Guiso de arroz 2</h2>
+                </div>
+            </a>
+  
+            <!-- TARJETA RECETA 9 -->
+            <a href="#receta9" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Guiso de arroz 3.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Guiso de arroz 3</h2>
+                </div>
+            </a>  
+ 
+             <!-- TARJETA RECETA 10 -->
+            <a href="#receta10" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Risotto de espinacas.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Risoto de espinacas</h2>
+                </div>
+            </a>
+
+            <!-- TARJETA RECETA 11 -->
+            <a href="#receta11" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Risotto.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Risotto</h2>
+                </div>
+            </a>
+
+            <!-- TARJETA RECETA 12 -->
+            <a href="#receta12" class="recipe-card-btn">
+                <img class="recipe-img-box" src="1 grado/Tarteletas de pollo.jpeg" alt="Foto Arroz arcoíris">
+                <div class="recipe-info">
+                    <h2>Tarteletas de pollo</h2>
+                </div>
+            </a>
         </div>
     </main>
 
-    <!-- RECETA 1 ESCRITA (SE ABRE AL TOCAR) -->
+    <!-- VENTANA 1: FOTO DE LA RECETA ENTERA -->
     <div id="receta1" class="recipe-modal">
         <div class="modal-body">
             <a href="#" class="close-btn">&times;</a>
-            <h2>Tarta de Manzana</h2>
-            <p class="author-text">Aportada por: <strong>Juan Pérez</strong> (1.er Grado)</p>
-
-            <h3 class="subtitle">Ingredientes:</h3>
-            <ul>
-                <li>2 manzanas rojas</li>
-                <li>1 taza de harina leudante</li>
-                <li>1/2 taza de azúcar</li>
-                <li>2 huevos</li>
-                <li>1/2 taza de leche</li>
-            </ul>
-
-            <h3 class="subtitle">Preparación:</h3>
-            <ol>
-                <li>Pelar y cortar las manzanas en rodajas finas.</li>
-                <li>En un bol, mezclar los huevos con el azúcar y la leche.</li>
-                <li>Agregar la harina leudante e integrar bien.</li>
-                <li>Verter en un molde enmantecado y acomodar las manzanas arriba.</li>
-                <li>Hornear a 180°C durante 35 minutos.</li>
-            </ol>
+            <h2>Arroz arcoiris</h2>
             
-            <br>
-            <a href="#" class="btn-back" style="display: block; text-align: center; margin-bottom: 0;">Volver a la lista</a>
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Arroz arcoirias.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
         </div>
     </div>
 
-    <!-- RECETA 2 ESCRITA (SE ABRE AL TOCAR) -->
+    <!-- VENTANA 2: FOTO DE LA RECETA ENTERA -->
     <div id="receta2" class="recipe-modal">
         <div class="modal-body">
             <a href="#" class="close-btn">&times;</a>
-            <h2>Galletas de Avena</h2>
-            <p class="author-text">Aportada por: <strong>María González</strong> (1.er Grado)</p>
+            <h2>Arroz con leche </h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Arroz con lecha 2.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
 
-            <h3 class="subtitle">Ingredientes:</h3>
-            <ul>
-                <li>1 taza de avena</li>
-                <li>1/2 taza de azúcar</li>
-                <li>1 huevo</li>
-                <li>50g de manteca</li>
-            </ul>
+    <div id="receta3" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Arroz con leche 2</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Arroz con leche 3.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
 
-            <h3 class="subtitle">Preparación:</h3>
-            <ol>
-                <li>Mezclar todos los ingredientes hasta obtener una masa uniforme.</li>
-                <li>Hacer bolitas y acomodarlas en una asadera enmantecada.</li>
-                <li>Llevar al horno durante 15 minutos hasta dorar.</li>
-            </ol>
+    <div id="receta4" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Arroz con leche 3</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Arroz con leche 4.jpeg.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
 
-            <br>
-            <a href="#" class="btn-back" style="display: block; text-align: center; margin-bottom: 0;">Volver a la lista</a>
+    <div id="receta5" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Croquetas de arroz y queso</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Croquetad de arroz y queso.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta6" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Croquetas de arroz </h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Crroquetas de arroz.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta7" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Guiso de arroz</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Guis de arroz.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta8" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Guiso de arroz 2</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Guiso de arroz 2.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta9" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Guiso de arroz 3</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Guiso de arroz 3.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta10" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Risotto de espinacas</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Risotto de espinacas.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta11" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Risotto</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Risotto.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
+        </div>
+    </div>
+
+    <div id="receta12" class="recipe-modal">
+        <div class="modal-body">
+            <a href="#" class="close-btn">&times;</a>
+            <h2>Tarteletas de pollo</h2>
+            
+            <!-- Acá va la foto con la receta escrita -->
+            <img class="full-recipe-img" src="1 grado/Tarteletas de pollo.jpeg" >
+            
+            <a href="#" class="btn-back" style="display: inline-block; margin-bottom: 0;">Volver a la lista</a>
         </div>
     </div>
 
